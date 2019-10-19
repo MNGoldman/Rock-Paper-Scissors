@@ -1,0 +1,122 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 6vh;
+    background: #ff4b1f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1fddff, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1fddff, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    font-size: 1rem;
+    margin: 5vh 0vh;
+}
+
+.newgame {
+    background: transparent;
+    border: 3px solid #1fddff;
+    color: #1fddff;
+    font-size: 0.8rem;
+    margin-bottom: 5vh;
+    padding: 0.5vh;
+    border-radius: 2%;
+ }
+ 
+ .newgame:hover, .MyButton:focus {
+    background: #1fddff;
+    border: 5px solid #1fddff;
+    color: white;
+
+ }
+
+ .instructions {
+     font-size: .45rem;
+ }
+
+.title {
+    font-size: .85rem;
+    margin-top: 1vh;
+    flex-direction: column;
+}
+
+.rock {
+    color: rgb(61, 65, 71);
+}
+
+.paper {
+    color: white;
+}
+
+.scissors {
+    color: rgb(224, 223, 219);
+}
+
+.hands {
+    display: flex;
+    font-size: 15vh;
+    margin-top: 7.5vh;
+}
+
+.yourHand__rock, .yourHand__paper {
+    transform: rotate(80deg);
+    margin-right: 12vw;
+}
+
+.compHand__rock, .compHand__paper {
+    transform: rotate(100deg);
+    margin-left: 12vw;
+}
+
+.yourHand__scissors {
+    transform: rotate(170deg);
+    margin-right: 12vw;
+}
+
+.compHand__scissors {
+    transform: rotate(10deg);
+    margin-left: 12vw;
+
+}
+
+.bounce {
+    animation: bounce 2s;
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100%,
+    
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-7vh);
+    }
+    40% {
+        transform: translateY(-7vh);
+    }
+
+    60% {
+        transform: translateY(-7vh);
+    }
+
+    80% {
+        transform: translateY(-7vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
