@@ -1,0 +1,30 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "A Rock-Paper-Scissors app created by myself to practice and demonstrate my current JS skills.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MNGoldman/Rock-Paper-Scissors.git"
+  },
+  "author": "Mac Goldman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MNGoldman/Rock-Paper-Scissors/issues"
+  },
+  "homepage": "https://github.com/MNGoldman/Rock-Paper-Scissors#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.23.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {}
+}

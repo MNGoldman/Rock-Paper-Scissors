@@ -1,0 +1,31 @@
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    font-size: 1rem;
+    margin: 5vh 0vh;
+}
+
+.newgame {
+    background: transparent;
+    border: 3px solid map-get($colors, "GradientBlue");
+    color: map-get($colors, "GradientBlue");
+    font-size: 0.8rem;
+    margin-bottom: 5vh;
+    padding: 0.5vh;
+    border-radius: 2%;
+ }
+ 
+ .newgame:hover, .MyButton:focus {
+    background: map-get($colors, "GradientBlue");
+    border: 5px solid map-get($colors, "GradientBlue");
+    color: white;
+
+ }
+
+ .title {
+    font-size: .85rem;
+    margin-top: 1vh;
+    flex-direction: column;
+}

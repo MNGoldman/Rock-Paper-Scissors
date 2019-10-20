@@ -1,0 +1,92 @@
+$colors: (GradientBlue: #1fddff, GradientRed: #ff4b1f, Rock: rgb(61, 65, 71), Paper: White, Scissors: rgb(224, 223, 219));
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 6vh;
+    background: map-get($colors, "GradientRed");  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, map-get($colors, "GradientBlue"), map-get($colors, "GradientRed"));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, map-get($colors, "GradientBlue"), map-get($colors, "GradientRed")); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}
+
+ .instructions {
+     font-size: .45rem;
+ }
+
+.rock {
+    color: map-get($colors, "Rock");
+}
+
+.paper {
+    color: map-get($colors, "Paper");
+}
+
+.scissors {
+    color: map-get($colors, "Scissors");
+}
+
+.hands {
+    display: flex;
+    font-size: 15vh;
+    margin-top: 7.5vh;
+}
+
+.yourHand__rock, .yourHand__paper {
+    transform: rotate(80deg);
+    margin-right: 12vw;
+}
+
+.compHand__rock, .compHand__paper {
+    transform: rotate(100deg);
+    margin-left: 12vw;
+}
+
+.yourHand__scissors {
+    transform: rotate(170deg);
+    margin-right: 12vw;
+}
+
+.compHand__scissors {
+    transform: rotate(10deg);
+    margin-left: 12vw;
+
+}
+
+.bounce {
+    animation: bounce 2s;
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100%,
+    
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-7vh);
+    }
+    40% {
+        transform: translateY(-7vh);
+    }
+
+    60% {
+        transform: translateY(-7vh);
+    }
+
+    80% {
+        transform: translateY(-7vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
