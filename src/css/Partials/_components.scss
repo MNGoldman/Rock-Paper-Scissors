@@ -21,7 +21,7 @@
     background: map-get($colors, "GradientBlue");
     border: 5px solid map-get($colors, "GradientBlue");
     color: white;
-
+    cursor: $link-cursor;
  }
 
  .title {

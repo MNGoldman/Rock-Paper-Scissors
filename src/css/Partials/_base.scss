@@ -1,4 +1,5 @@
 $colors: (GradientBlue: #1fddff, GradientRed: #ff4b1f, Rock: rgb(61, 65, 71), Paper: White, Scissors: rgb(224, 223, 219));
+$link-cursor: pointer;
 
 * {
     margin: 0 auto;
@@ -21,14 +22,17 @@ html {
 
 .rock {
     color: map-get($colors, "Rock");
+    cursor: $link-cursor;
 }
 
 .paper {
     color: map-get($colors, "Paper");
+    cursor: $link-cursor;
 }
 
 .scissors {
     color: map-get($colors, "Scissors");
+    cursor: $link-cursor;
 }
 
 .hands {
