@@ -2,16 +2,16 @@
 {
     // ****************** Variable Setup ******************
 
-    const newGame = document.querySelector(".newgame") as Element;
-    const rock = document.querySelector(".rock") as Element;
-    const paper = document.querySelector(".paper") as Element;
-    const scissors = document.querySelector(".scissors") as Element;
-    const hands = document.querySelector(".hands") as Element;
-    let yourHand = document.querySelector(".yourID") as Element;
-    let compHand = document.querySelector(".compID") as Element;
-    const yourScore = document.querySelector(".yourScore") as Element;
-    const compScore = document.querySelector(".compScore") as Element;
-    const results = document.querySelector(".resultsText") as Element;
+    const newGame = document.querySelector(".newgame") as HTMLElement;
+    const rock = document.querySelector(".rock") as HTMLElement;
+    const paper = document.querySelector(".paper") as HTMLElement;
+    const scissors = document.querySelector(".scissors") as HTMLElement;
+    const hands = document.querySelector(".hands") as HTMLElement;
+    let yourHand = document.querySelector(".yourID") as HTMLElement;
+    let compHand = document.querySelector(".compID") as HTMLElement;
+    const yourScore = document.querySelector(".yourScore") as HTMLElement;
+    const compScore = document.querySelector(".compScore") as HTMLElement;
+    const results = document.querySelector(".resultsText") as HTMLElement;
 
     const yourStartingHand: string = `<span class="yourID yourHand__rock rock"><i class="far fa-hand-rock"></i></span>`;
     const compStartingHand: string = `<span class="compID compHand__rock rock"><i class="far fa-hand-rock fa-flip-vertical"></i></span>`;
@@ -63,6 +63,13 @@
         resetGame();
     });
 
+    newGame.addEventListener("keyup", (e) => {
+    e.preventDefault();
+    if (e.keyCode === 13 || e.keyCode === 32) {
+        newGame.click();
+    }
+});
+
     rock.addEventListener("click", () => {
         tResetHands();
         selections.yourSelection = "rock";
@@ -71,6 +78,13 @@
         const loss = outcomes.rock.losesAgainst;
         tGameResults(win, loss);
         tResetBounce();
+    });
+
+    rock.addEventListener("keyup", (e) => {
+        e.preventDefault();
+        if (e.keyCode === 13 || e.keyCode === 32) {
+            rock.click();
+        }
     });
 
     paper.addEventListener("click", () => {
@@ -83,6 +97,13 @@
         tResetBounce();
     });
 
+    paper.addEventListener("keyup", (e) => {
+        e.preventDefault();
+        if (e.keyCode === 13 || e.keyCode === 32) {
+            paper.click();
+        }
+    });
+
     scissors.addEventListener("click", () => {
         tResetHands();
         selections.yourSelection = "scissors";
@@ -91,6 +112,13 @@
         const loss = outcomes.scissors.losesAgainst;
         tGameResults(win, loss);
         tResetBounce();
+    });
+
+    scissors.addEventListener("keyup", (e) => {
+        e.preventDefault();
+        if (e.keyCode === 13 || e.keyCode === 32) {
+            scissors.click();
+        }
     });
 
     // ****************** Game Function Logic Setup ******************
@@ -186,8 +214,8 @@
 
             hands.classList.toggle("bounce");
 
-            const yourTempHand = document.querySelector(".yourID") as Element;
-            const compTempHand = document.querySelector(".compID") as Element;
+            const yourTempHand = document.querySelector(".yourID") as HTMLElement;
+            const compTempHand = document.querySelector(".compID") as HTMLElement;
 
             yourHand = yourTempHand;
             compHand = compTempHand;

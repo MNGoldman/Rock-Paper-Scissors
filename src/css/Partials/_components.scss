@@ -17,15 +17,51 @@
     border-radius: 2%;
  }
  
- .newgame:hover, .MyButton:focus {
+ .newgame:hover {
     background: map-get($colors, "GradientBlue");
     border: 5px solid map-get($colors, "GradientBlue");
-    color: white;
+    color: map-get($colors, "Default");
     cursor: $link-cursor;
  }
+
+ .newgame:focus {
+    background: map-get($colors, "GradientBlue");
+    border: 5px solid map-get($colors, "GradientBlue");
+    color: map-get($colors, "Default");
+}
 
  .title {
     font-size: .85rem;
     margin-top: 1vh;
     flex-direction: column;
+}
+
+.rock {
+    color: map-get($colors, "Rock");
+    cursor: $link-cursor;
+}
+
+.rock:focus {
+    background: map-get($colors, "GradientBlue");
+    border: 5px solid map-get($colors, "GradientBlue");
+}
+
+.paper {
+    color: map-get($colors, "Paper");
+    cursor: $link-cursor;
+}
+
+.paper:focus {
+    background: map-get($colors, "GradientBlue");
+    border: 5px solid map-get($colors, "GradientBlue");
+}
+
+.scissors {
+    color: map-get($colors, "Scissors");
+    cursor: $link-cursor;
+}
+
+.scissors:focus {
+    background: map-get($colors, "GradientBlue");
+    border: 5px solid map-get($colors, "GradientBlue");
 }

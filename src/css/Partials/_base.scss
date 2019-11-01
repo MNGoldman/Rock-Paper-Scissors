@@ -1,4 +1,4 @@
-$colors: (GradientBlue: #1fddff, GradientRed: #ff4b1f, Rock: rgb(61, 65, 71), Paper: White, Scissors: rgb(224, 223, 219));
+$colors: (GradientBlue: #1fddff, GradientRed: #ff4b1f, Rock: rgb(61, 65, 71), Paper: White, Scissors: rgb(224, 223, 219), Default: White);
 $link-cursor: pointer;
 
 * {
@@ -19,21 +19,6 @@ html {
  .instructions {
      font-size: .45rem;
  }
-
-.rock {
-    color: map-get($colors, "Rock");
-    cursor: $link-cursor;
-}
-
-.paper {
-    color: map-get($colors, "Paper");
-    cursor: $link-cursor;
-}
-
-.scissors {
-    color: map-get($colors, "Scissors");
-    cursor: $link-cursor;
-}
 
 .hands {
     display: flex;
@@ -59,7 +44,6 @@ html {
 .compHand__scissors {
     transform: rotate(10deg);
     margin-left: 12vw;
-
 }
 
 .bounce {
